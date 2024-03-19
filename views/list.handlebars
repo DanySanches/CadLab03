@@ -1,0 +1,48 @@
+<nav class="navbar bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://i.ebayimg.com/images/g/7acAAOSwr1ZkKh2V/s-l1600.webp"
+        width="50"
+        height="50"
+        class="d-inline-block align-text-top"
+      />
+      Mostrar
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">CEP</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cad}}
+            <tr>
+                <td>{{nome}}</td>
+                <td>{{endereco}}</td>
+                <td>{{bairro}}</td>
+                <td>{{cep}}</td>
+                <td>{{cidade}}</td>
+                <td>{{estado}}</td>
+                <td>
+                    <!-- Botões de atualizar e excluir -->
+                    <button type="button" class="btn btn-primary">Atualizar</button>
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
